@@ -7,7 +7,7 @@ class Enclos:
         - taille : Petit | Moyen | Grand 
         - liste_animaux : Obligatoirement un set
     """
-    def enclos_data(self, nom , capacite_max = 15, taille = "Moyen", liste_animaux = set()):
+    def definir(self, nom , capacite_max = 15, taille = "Moyen", liste_animaux = set()):
         if not isinstance(liste_animaux, set): # Ici on s'assure que la liste est un set
                 raise TypeError("La liste des animaux doit être un set")
         self._nom = nom

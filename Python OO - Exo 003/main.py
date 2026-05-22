@@ -7,10 +7,10 @@ def main():
     elephant1 = Elephant()
     elephant2 = Elephant()
 
-    enclos1.enclos_data("Jardin", 10, "Moyen", set())
-    soigneur1.soigneur_data("Jack", 1975, 10, set())
-    elephant1.elephant_data("Jumbo", 50, 50, True, soigneur1)
-    elephant2.elephant_data("Tiérry", 100, 80, True, soigneur1)
+    enclos1.definir("Jardin", 10, "Moyen", set())
+    soigneur1.definir("Jack", 1975, 10, set())
+    elephant1.definir("Jumbo", 50, 50, True, soigneur1)
+    elephant2.definir("Tiérry", 100, 80, True, soigneur1)
 
     print(elephant2.elephant_data_display)
     print(soigneur1.liste_animaux_responsable_ajout(elephant1))

@@ -1,11 +1,15 @@
-class Elephant:
+from Models import Animal
+
+class Elephant(Animal):
     
-    def elephant_data(self, nom, appetit = 50, satisfaction = 50, en_vie = True, soigneur = None):
-        self._nom = nom
-        self._appetit = appetit
-        self._satisfaction = satisfaction
-        self._en_vie = en_vie
-        self._soigneur = soigneur
+    def definir(self, nom, appetit, satisfaction, en_vie, soigneur, longueur_defense):
+        # self._nom = nom
+        # self._appetit = appetit
+        # self._satisfaction = satisfaction
+        # self._en_vie = en_vie
+        # self._soigneur = soigneur
+        super().definir(nom, appetit, satisfaction, en_vie, soigneur,)
+        self._longueur_defense = longueur_defense
     
     @property
     def elephant_data_display(self):
@@ -54,13 +58,27 @@ class Elephant:
     # Afficher si l'animal est en vie
     @property
     def en_vie(self):
-        if self._en_vie == True: return f"{self._nom} est en vie."
+        if not isinstance(self._en_vie , bool):
+            raise TypeError ("Le parametre en_vie, doit être une bolean")
+        elif self._en_vie == True: return f"{self._nom} est en vie."
         return f"{self._nom} est décédé."
 
     # Etablire le soigneur
     @property
     def soigneur(self):
         return f"Le soigneur de l'éléphant est {self._soigneur}"
+    @soigneur.setter
+    def soigneur(self, value):
+        self._soigneur = value
+    
+    # Afficher la longueur des défense
+    @property
+    def longueur_defense(self):
+        return self._longueur_defense
+    @longueur_defense.setter
+    def longueur_defense(self, value):
+        self._longueur_defense = value
+
     # Capaciter à manger (se lance automatiquement) | vérifie si l'animal est en vie | si il a faim ou pas | mange augumenter son appétit et sa satifaction
     def manger(self):
         if self._en_vie == False:
@@ -74,3 +92,11 @@ class Elephant:
             self._satisfaction += 10
             return f"{self._nom} à un peu manger au arbre \n Appetit : {self._appetit} \n Satisfaction : {self._satisfaction}\n"
         return f"L'éléphant n'a rien fait."
+    
+    def prendre_bain_de_boue(self):
+        self.satisfaction += 20
+        return f"L'éléphant à jouer dans la boue et sa satisfaction à augumenter"
+
+    def aspirer_eau(self):
+        self.satisfaction += 20
+        return f"L'éléphant à aspirer de l'eau et sa satisfaction à augumenter"

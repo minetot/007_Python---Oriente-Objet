@@ -2,7 +2,7 @@ import datetime
 from Models import Elephant
 
 class Soigneur:
-    def soigneur_data(self, nom, date_naissance, experience = 0 , liste_animaux_responsable = set()):
+    def definir(self, nom, date_naissance, experience = 0 , liste_animaux_responsable = set()):
         if not isinstance(liste_animaux_responsable, set): # Ici on s'assure que la liste est un set
             raise TypeError("La liste des animaux doit être un set")
         self._nom = nom
