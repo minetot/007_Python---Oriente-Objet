@@ -2,13 +2,13 @@ from Models import Animal
 
 class Girafe(Animal):
     
-    def definir(self, nom, appetit , satisfaction , en_vie , soigneur , longueur_cou):
+    def __init__(self, nom, appetit , satisfaction , en_vie , soigneur , longueur_cou):
         # self._nom = nom
         # self._appetit = appetit
         # self._satisfaction = satisfaction
         # self._en_vie = en_vie
         # self._soigneur = soigneur
-        super().definir(nom, appetit, satisfaction, en_vie, soigneur,)
+        super().__init__(nom, appetit, satisfaction, en_vie, soigneur,)
         self._longueur_cou = longueur_cou
         
     # @property
@@ -21,7 +21,7 @@ class Girafe(Animal):
     # Affiche du nom
     @property
     def nom(self):
-        return f"Le nom de l'animal est : {self.nom}\n"
+        return f"Le nom de l'animal est : {self._nom}\n"
     # Setter sur le nom
     @nom.setter
     def nom(self, value):
@@ -79,3 +79,6 @@ class Girafe(Animal):
     def boire_eau(self):
         self.satisfaction += 20
         return f"La girafe a bu de l'eau et sa satifaction à augumentée"
+    
+    def faire_bruit(self):
+        return f"Girafe, girafe"

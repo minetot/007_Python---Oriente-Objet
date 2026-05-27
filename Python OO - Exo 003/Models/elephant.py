@@ -2,21 +2,22 @@ from Models import Animal
 
 class Elephant(Animal):
     
-    def definir(self, nom, appetit, satisfaction, en_vie, soigneur, longueur_defense):
+    def __init__(self, nom, appetit, satisfaction, en_vie, soigneur, longueur_defense):
         # self._nom = nom
         # self._appetit = appetit
         # self._satisfaction = satisfaction
         # self._en_vie = en_vie
         # self._soigneur = soigneur
-        super().definir(nom, appetit, satisfaction, en_vie, soigneur,)
+        super().__init__(nom, appetit, satisfaction, en_vie, soigneur,)
         self._longueur_defense = longueur_defense
     
-    @property
-    def elephant_data_display(self):
-        if self._en_vie == True:
-            return f"L'éléphant {self._nom} est en vie et son Soigneur est {self._soigneur}. \n Son appetit est à {self._appetit} \n Sa satisaction est à {self._satisfaction}"
-        return f"L'éléphant {self._nom} est mort"
-    
+    # @property
+    # def elephant_data_display(self):
+    #     if self._en_vie == True:
+    #         return f"L'éléphant {self._nom} est en vie et son Soigneur est {self._soigneur}. \n Son appetit est à {self._appetit} \n Sa satisaction est à {self._satisfaction}"
+    #     return f"L'éléphant {self._nom} est mort"
+    Animal.animal_data_display()
+
     # Affiche du nom
     @property
     def nom(self):
@@ -100,3 +101,6 @@ class Elephant(Animal):
     def aspirer_eau(self):
         self.satisfaction += 20
         return f"L'éléphant à aspirer de l'eau et sa satisfaction à augumenter"
+    
+    def faire_bruit(self):
+        return f"élé, élé"
