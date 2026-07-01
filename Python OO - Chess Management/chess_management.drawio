@@ -1,0 +1,60 @@
+<mxfile host="65bd71144e">
+    <diagram id="6GMZilAAF7obCBVct61B" name="Page-1">
+        <mxGraphModel dx="1372" dy="524" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5" value="Player&lt;div style=&quot;padding-top: 10px;&quot;&gt;username&lt;/div&gt;&lt;div style=&quot;padding-top: 0px;&quot;&gt;email&lt;/div&gt;&lt;div style=&quot;padding-top: 0px;&quot;&gt;date_of_birth&lt;/div&gt;&lt;div style=&quot;padding-top: 0px;&quot;&gt;gender&lt;/div&gt;&lt;div style=&quot;padding-top: 0px;&quot;&gt;elo&lt;/div&gt;&lt;div style=&quot;padding-top: 0px;&quot;&gt;&lt;hr&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-30" y="500" width="130" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;" parent="1" source="7" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Tournament&lt;div style=&quot;padding-top: 10px;&quot;&gt;tournament_id&lt;/div&gt;&lt;div style=&quot;padding-top: 0px;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;name&lt;/span&gt;&lt;/div&gt;&lt;div&gt;location&lt;/div&gt;&lt;div&gt;nb_players&lt;/div&gt;&lt;div&gt;elo&lt;/div&gt;&lt;div&gt;category&lt;/div&gt;&lt;div&gt;status&lt;/div&gt;&lt;div&gt;current_round_number&lt;/div&gt;&lt;div&gt;bool_women_only&lt;/div&gt;&lt;div&gt;list_player&lt;/div&gt;&lt;div&gt;&lt;hr&gt;add_player()&lt;/div&gt;&lt;div&gt;remove_player()&lt;/div&gt;&lt;div&gt;start_tournament()&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="445" width="130" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Chess Management" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="360" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Tournament_List&lt;div style=&quot;padding-top: 10px;&quot;&gt;Tournament&lt;/div&gt;&lt;div style=&quot;padding-top: 10px;&quot;&gt;&lt;hr&gt;display()&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="520" width="120" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=none;html=1;" parent="1" source="5" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="720" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=none;html=1;" parent="1" source="18" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="edgeStyle=none;html=1;" parent="1" source="18" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=none;html=1;endArrow=diamond;endFill=1;" parent="1" source="18" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Match&lt;div style=&quot;padding-top: 10px;&quot;&gt;tournament_id&lt;/div&gt;&lt;div&gt;white_player&lt;/div&gt;&lt;div&gt;black_player&lt;/div&gt;&lt;div&gt;round_number&lt;/div&gt;&lt;div&gt;result&lt;/div&gt;&lt;div&gt;&lt;hr&gt;next_round()&lt;/div&gt;&lt;div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-25" y="760" width="120" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=none;html=1;" parent="1" source="22" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=none;html=1;exitX=0.95;exitY=0.067;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="22" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=none;html=1;endArrow=diamond;endFill=1;" parent="1" source="22" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-180" y="990" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-180" y="1000"/>
+                            <mxPoint x="210" y="1000"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="Ranking_scores&lt;div style=&quot;padding-top: 10px;&quot;&gt;Player_name&lt;/div&gt;&lt;div&gt;nb_matches_played&lt;/div&gt;&lt;div&gt;nb_wins&lt;/div&gt;&lt;div&gt;nb_looses&lt;/div&gt;&lt;div&gt;nb_draws&lt;/div&gt;&lt;hr&gt;&lt;div&gt;score_calculation ()&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-240" y="765" width="120" height="150" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
